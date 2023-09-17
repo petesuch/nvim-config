@@ -17,3 +17,7 @@ Here is a list of plugins used for packer...
  'hrsh7th/nvim-cmp'
  'hrsh7th/cmp-nvim-lsp'
  'L3MON4D3/LuaSnip'
+ 'numToStr/Comment.nvim'
+
+On Windows, be sure to create a nvim-data/site/pack/packer/start/ directory and
+clone the packer.nvim there.

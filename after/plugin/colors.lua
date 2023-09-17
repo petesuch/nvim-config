@@ -1,3 +1,6 @@
+--  colors.lua
+--  lualine and tokyonight get configured here
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -42,13 +45,14 @@ require('lualine').setup {
   extensions = {}
 }
 
+-- Tokyonight
 require("tokyonight").setup({
   style = "moon",
   -- Change the "hint" color to the "orange" color, and make the "error" color bright red
   on_colors = function(colors)
     colors.hint = colors.orange
     colors.error = "#ff0000"
-    colors.bg_dark = "#00000" 
+    colors.bg_dark = "#00000"
     colors.bg = "#000000"  -- THIS is the real background for most editing 
   end
 })
