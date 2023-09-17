@@ -1,0 +1,5 @@
+require("petesuch.packer")
+require("petesuch.nvimtree")
+require("petesuch.remap")
+require("petesuch.set")
+require("mason").setup()
