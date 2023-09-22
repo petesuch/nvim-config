@@ -1,5 +1,6 @@
 # nvim-config
-Mostly inspired by theprimeagen but simpler for my preferences.
+
+Mostly inspired by theprimeagen and simpler for my preferences.
 Here is a list of plugins used for packer...
 
 	 'wbthomason/packer.nvim'
@@ -18,7 +19,7 @@ Here is a list of plugins used for packer...
 	 'L3MON4D3/LuaSnip'
 	 'numToStr/Comment.nvim'
 
-On Windows, be sure to create a nvim-data/site/pack/packer/start/ directory and
-clone the packer.nvim there.
+On Windows, be sure to create a nvim-data/site/pack/packer/start/ directory
+and then clone the packer.nvim there:
 
 	git clone https://github.com/wbthomason/packer.nvim
