@@ -7,7 +7,7 @@ require('lualine').setup {
     --theme = 'auto',
     --theme = 'dracula',
     --theme = 'powerline_dark',
-    theme = 'papercolor',
+    theme = 'PaperColor',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
