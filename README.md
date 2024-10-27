@@ -23,3 +23,8 @@ On Windows, be sure to create a nvim-data/site/pack/packer/start/ directory
 and then clone the packer.nvim there:
 
 	git clone https://github.com/wbthomason/packer.nvim
+ 
+On Unix/Linux:
+
+	git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ 	~/.local/share/nvim/site/pack/packer/start/packer.nvim
