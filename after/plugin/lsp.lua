@@ -1,11 +1,6 @@
 local lsp = require('lsp-zero')
 lsp.preset("recommended")
 
-lsp.ensure_installed({
-  'tsserver',
-  'eslint',
-})
-
 lsp.set_preferences({
   suggest_lsp_servers = true,
   setup_servers_on_start = true,
