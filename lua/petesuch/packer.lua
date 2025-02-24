@@ -8,25 +8,24 @@ return require('packer').startup(function(use)
     tag = '0.1.2',
   }
 
-  use {
-    'folke/tokyonight.nvim',
-    lazy = false,
-    priority = 1000,
-  }
+use {
+  'ii14/onedark.nvim',
+  config = function()
+    require("onedark").setup({
+      style = "darker",  -- Try "deep" or "darker"
+      colors = { bg = "#000000" }  -- Set background to black
+    })
+    require("onedark").load()  -- Apply the theme
+  end
+}
 
   -- Lualine and nvim-tree need devicons
   use { 'nvim-tree/nvim-web-devicons' }
-  use {
-    'nvim-lualine/lualine.nvim',
-  }
-  use {
-    'nvim-tree/nvim-tree.lua',
-  }
+  use { 'nvim-lualine/lualine.nvim', }
+  use { 'nvim-tree/nvim-tree.lua', }
 
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  }
+  use { 'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate' }
 
   use {
     'VonHeikemen/lsp-zero.nvim',
