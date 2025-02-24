@@ -45,16 +45,30 @@ require('lualine').setup {
   extensions = {}
 }
 
--- Tokyonight
-require("tokyonight").setup({
-  style = "moon",
-  -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-  on_colors = function(colors)
-    colors.hint = colors.orange
-    colors.error = "#ff0000"
-    colors.bg_dark = "#00000"
-    colors.bg = "#000000"  -- THIS is the real background for most editing 
-  end
-})
+--require("tokyonight").setup({
+ -- style = "storm", -- Try "storm", "night", "moon", or "day"
+  --transparent = false, -- Change to true if you want a transparent background
+ -- terminal_colors = true, -- Ensure terminal colors are applied
+--})
+--vim.cmd("colorscheme tokyonight")
 
---vim.cmd[[colorscheme tokyonight-moon]]
+
+vim.cmd("highlight Normal guibg=#000000")
+
+
+-- OneDark
+ -- Tokyonight
+-- require("tokyonight").setup({
+--   style = "storm", -- Try "storm", "night", "moon", or "day"
+--   transparent = false, -- Change to true if you want a transparent background
+--   terminal_colors = true, -- Ensure terminal colors are applied
+--   -- style = "moon",
+--   -- Change the "hint" color to the "orange" color, and make the "error" color bright red
+--   on_colors = function(colors)
+--     colors.hint = colors.orange
+--     colors.error = "#ff0000"
+--     colors.bg_dark = "#00000"
+--     colors.bg = "#000000"  -- THIS is the real background for most editing 
+--   end
+-- })
+-- vim.cmd[["colorscheme tokyonight"]]
