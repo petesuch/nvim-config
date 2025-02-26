@@ -7,18 +7,14 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim',
     tag = '0.1.2',
   }
-
-use {
-  'ii14/onedark.nvim',
-  config = function()
-    require("onedark").setup({
-      style = "darker",  -- Try "deep" or "darker"
-      colors = { bg = "#000000" }  -- Set background to black
-    })
-    require("onedark").load()  -- Apply the theme
-  end
-}
-
+    
+use 'navarasu/onedark.nvim'
+  require('onedark').setup {
+    style = 'darker',
+      transparent = false
+  }
+require('onedark').load()
+    
   -- Lualine and nvim-tree need devicons
   use { 'nvim-tree/nvim-web-devicons' }
   use { 'nvim-lualine/lualine.nvim', }
