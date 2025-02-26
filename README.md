@@ -19,15 +19,9 @@ Here is a list of plugins used for packer...
 	 'L3MON4D3/LuaSnip'
 	 'numToStr/Comment.nvim'
 
-Windows usually puts all nvim stuf in $HOME\AppData\Local\nvim and $HOME\AppData\Local\nvim-data. So be sure to create a nvim-data/site/pack/packer/start/ directory
-and then clone the nvim-config and packer.nvim in their respective places.
+Windows usually puts all nvim stuff in some crazy directory so just follow the advice directly from wbthomason/packer directly: 
 
-	cd $HOME\AppData\Local\nvim\
- 	git clone https://www.github.com/petesuch/nvim-config
-  	mv nvim-config/ nvim/
-
-  	cd $hOME\AppData\Local\nvim-data\site\pack\packer\start
-	git clone https://github.com/wbthomason/packer.nvim
+	git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
  	
  
 On Unix/Linux:
