@@ -1,11 +1,11 @@
 # nvim-config
 
-Mostly inspired by theprimeagen and simpler for my preferences.
-Here is a list of plugins used for packer...
+Mostly inspired by theprimeagen but simpler for my preferences.
+Here is a list of plugins used for packer:
 
 	 'wbthomason/packer.nvim'
 	 'nvim-telescope/telescope.nvim'
-	 'folke/tokyonight.nvim'
+	 'petesuch/darkpeter.nvim'
 	 'nvim-tree/nvim-web-devicons' 
 	 'nvim-lualine/lualine.nvim'
 	 'nvim-tree/nvim-tree.lua'
@@ -19,7 +19,8 @@ Here is a list of plugins used for packer...
 	 'L3MON4D3/LuaSnip'
 	 'numToStr/Comment.nvim'
 
-Windows usually puts all nvim stuff in some crazy directory so just follow the advice directly from wbthomason/packer directly: 
+Windows usually puts all nvim stuff in some crazy directory
+so just follow the advice directly from wbthomason/packer directly: 
 
 	git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
  	
