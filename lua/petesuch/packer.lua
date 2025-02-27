@@ -6,7 +6,7 @@ return require('packer').startup(function(use)
 
   -- OneDark Theme (Navarasu) with a black background
   use {
-    'navarasu/onedark.nvim',
+    'petesuch/darkpeter.nvim',
     lazy = false,
     priority = 1000,
     config = function()
