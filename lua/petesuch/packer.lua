@@ -4,18 +4,18 @@ return require('packer').startup(function(use)
   -- Packer manages itself
   use 'wbthomason/packer.nvim'
 
-  -- OneDark Theme (Navarasu) with a black background
+  --  Navarasu onedark with higher contrast settings for people with early cataracts
   use {
     'petesuch/darkpeter.nvim',
     lazy = false,
     priority = 1000,
     config = function()
-      require("onedark").setup({
-        style = "darker", -- Available: dark, darker, cool, deep, warm, warmer
+      require("darkpeter").setup({
+        style = "dark",
         term_colors = true, -- Ensure terminal colors match
         colors = { bg = "#000000" } -- Force pure black background
       })
-      require("onedark").load()
+      require("darkpeter").load()
     end
   }
 
@@ -27,13 +27,13 @@ return require('packer').startup(function(use)
   }
 
   -- Treesitter for syntax highlighting
-  use { 
-    'nvim-treesitter/nvim-treesitter', 
+  use {
+    'nvim-treesitter/nvim-treesitter',
     run = ":TSUpdate"
   }
 
   -- Lualine: Status line with devicons
-  use { 
+  use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons' }
   }
