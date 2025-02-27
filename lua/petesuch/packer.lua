@@ -5,13 +5,14 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   --  Navarasu onedark with higher contrast settings for people with early cataracts
+
   use {
     'petesuch/darkpeter.nvim',
     lazy = false,
     priority = 1000,
     config = function()
       require("darkpeter").setup({
-        style = "dark",
+        style = "deep",
         term_colors = true, -- Ensure terminal colors match
         colors = { bg = "#000000" } -- Force pure black background
       })
