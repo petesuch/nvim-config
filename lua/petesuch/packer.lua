@@ -12,7 +12,7 @@ return require('packer').startup(function(use)
     priority = 1000,
     config = function()
       require("darkpeter").setup({
-        style = "deep",
+        style = "dark",
         term_colors = true, -- Ensure terminal colors match
         colors = { bg = "#000000" } -- Force pure black background
       })
