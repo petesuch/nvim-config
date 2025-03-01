@@ -38,12 +38,6 @@ return require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons' }
   }
 
-  -- Nvim-tree: File explorer
-  use {
-    'nvim-tree/nvim-tree.lua',
-    requires = { 'nvim-tree/nvim-web-devicons' }
-  }
-
   -- LSP Setup (Language Server Protocol)
   use {
     'VonHeikemen/lsp-zero.nvim',
