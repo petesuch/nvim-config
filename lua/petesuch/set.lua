@@ -1,26 +1,29 @@
+-- Set leader key
 vim.g.mapleader = "  "
+
+-- Cursor and numbering
 vim.opt.guicursor = ""
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
--- Set global indentation preferences
-vim.opt.expandtab = true  -- Use spaces instead of tabs
-vim.opt.shiftwidth = 2     -- Number of spaces for indentation
-vim.opt.tabstop = 2        -- Number of spaces per tab character
-vim.opt.softtabstop = 2    -- Number of spaces when pressing <Tab>
+-- Indentation preferences
+vim.opt.expandtab = true      -- Use spaces instead of tabs
+vim.opt.shiftwidth = 2        -- Number of spaces for indentation
+vim.opt.tabstop = 2           -- Number of spaces per tab character
+vim.opt.softtabstop = 2       -- Number of spaces when pressing <Tab>
+vim.opt.smartindent = true    -- Enable smart indentation
 
--- Set indentation for Python specifically
+-- Python-specific indentation
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "python",
-    callback = function()
-        vim.opt_local.shiftwidth = 4
-        vim.opt_local.tabstop = 4
-        vim.opt_local.softtabstop = 4
-    end,
+  pattern = "python",
+  callback = function()
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.tabstop = 4
+    vim.opt_local.softtabstop = 4
+  end,
 })
 
-
-vim.opt.smartindent = smartindent
+-- UI settings
 vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -32,11 +35,10 @@ vim.opt.scrolloff = 3
 vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "85"
-vim.opt.paste = true
--- Autoreload if file changes in external editor
+
+-- Auto-reload files when changed externally
 vim.opt.autoread = true
-vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
-  command = "if mode() != 'c' | checktime | endif",
-  pattern = { "*" },
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "FocusGained" }, {
+  command = "checktime",
 })
 
