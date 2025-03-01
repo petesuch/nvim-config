@@ -4,3 +4,5 @@ require("petesuch.nvimtree")
 require("petesuch.set")
 require("mason").setup()
 require("petesuch.lsp")
+
+vim.opt.clipboard = "unnamedplus"
