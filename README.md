@@ -1,7 +1,9 @@
 # nvim-config
 
-Mostly inspired by theprimeagen but simpler for my preferences.
-Here is a list of plugins used for packer:
+Mostly inspired by "ThePrimeagen" but simpler for my meager preferences.
+Here is a list of plugins used for packer: Really is a work in progress.
+I enjoy going back and forth between editors; sometimes one editor is usefull in one way and not so usefull in another.
+Also keeps you sharp.  
 
 	 'wbthomason/packer.nvim'
 	 'nvim-telescope/telescope.nvim'
