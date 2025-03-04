@@ -1,6 +1,4 @@
-require("nvim-tree").setup()
-
--- OR setup with some options
+-- setup with some options
 require("nvim-tree").setup({
     sort = {
         sorter = "case_sensitive",
