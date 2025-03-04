@@ -39,10 +39,19 @@ return require('packer').startup(function(use)
     }
 
 
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+    }
+
     -- Lualine: Status line with devicons
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons' }
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+        },
     }
 
     -- LSP Setup (Language Server Protocol)
