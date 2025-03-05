@@ -2,10 +2,10 @@
 
 -- 🌟 Leader Key
 vim.g.mapleader = "  "  -- double spaces
-vim.g.maplocalleader = "  " 
+vim.g.maplocalleader = "  "
 
 vim.opt.clipboard = "unnamedplus"
---
+
 -- 🌟 Key Mappings
 vim.keymap.set("n", "<leader>ex", ":NvimTreeOpen<CR>", { noremap = true, silent = false })
 
@@ -16,13 +16,12 @@ vim.g.loaded_netrwPlugin = 1
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
 
-
 -- 🌟 UI Settings
 vim.opt.guicursor = ""
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.termguicolors = true
-vim.opt.scrolloff = 3
+vim.opt.scrolloff = 2
 vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "85"
@@ -36,12 +35,12 @@ vim.opt.smartindent = true -- Enable smart indentation
 
 -- Python-specific indentation
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "python",
-    callback = function()
-        vim.opt_local.shiftwidth = 4
-        vim.opt_local.tabstop = 4
-        vim.opt_local.softtabstop = 4
-    end,
+  pattern = "python",
+  callback = function()
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.tabstop = 4
+    vim.opt_local.softtabstop = 4
+  end,
 })
 
 -- 🌟 Other Editor Behavior
@@ -52,7 +51,13 @@ vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.autoread = true  -- Auto-reload files if changed externally
-vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "FocusGained" }, {
-    command = "checktime",
-})
+vim.api.nvim_create_autocmd({
+	"BufEnter",
+	"CursorHold",
+	"FocusGained"
+},
+{
+  command = "checktime",
+}
+)
 

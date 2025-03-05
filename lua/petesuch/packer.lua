@@ -29,9 +29,11 @@ return require('packer').startup(function(use)
   -- Treesitter for syntax highlighting
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = ":TSUpdate"
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
   }
-
 
   require'nvim-treesitter.configs'.setup {
     highlight = {
