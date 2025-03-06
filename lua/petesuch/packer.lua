@@ -49,10 +49,6 @@ return require('packer').startup(function(use)
     },
   }
 
-  require'nvim-treesitter.configs'.setup {
-    highlight = { enable = true },
-    ensure_installed = { "lua", "python", "c", "cpp" }, -- Add other languages if needed
-  }
 
   use {
     'nvim-tree/nvim-tree.lua',
