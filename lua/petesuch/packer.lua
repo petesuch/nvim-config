@@ -28,9 +28,7 @@ return require('packer').startup(function(use)
 
   -- Treesitter for syntax highlighting
   use {
-    'nvim-treesitter/nvim-treesitter',
-<<<<<<< HEAD
-    run = function()
+    'nvim-treesitter/nvim-treesitter',  run = function()
       local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
       ts_update()
     end,
@@ -51,19 +49,11 @@ return require('packer').startup(function(use)
     },
   }
 
-  -- Similar to netrw but nicer
-=======
-    run = ":TSUpdate"
-  }
-
-
   require'nvim-treesitter.configs'.setup {
     highlight = { enable = true },
     ensure_installed = { "lua", "python", "c", "cpp" }, -- Add other languages if needed
   }
 
-
->>>>>>> 83afcce (clean up)
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
