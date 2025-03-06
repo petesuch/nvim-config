@@ -32,8 +32,8 @@ On Unix/Linux:
 
 	mkdir -p ~/.config/
  	cd ~/.config/ 
- 	git clone https://www.github.com/petesuch/nvim-config
-  	mv nvim-config/ nvim/
+ 	git clone https://www.github.com/petesuch/nvim-config nvim/
+  	
 
 
 	mkdir -p ~/.local/share/nvim/site/pack/packer/start/
