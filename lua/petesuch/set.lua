@@ -51,19 +51,9 @@ vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.autoread = true  -- Auto-reload files if changed externally
-<<<<<<< HEAD
-vim.api.nvim_create_autocmd({
-	"BufEnter",
-	"CursorHold",
-	"FocusGained"
-},
-{
-  command = "checktime",
-}
-)
-=======
+
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "FocusGained" }, {
   command = "checktime",
 })
->>>>>>> 83afcce (clean up)
+
 
