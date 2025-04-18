@@ -30,13 +30,13 @@ so just follow the advice directly from wbthomason/packer directly:
  
 On Unix/Linux:
 
-	mkdir -p ~/.config/
+	mkdir -pv ~/.config/
  	cd ~/.config/ 
  	git clone https://www.github.com/petesuch/nvim-config nvim/
   	
 
 
-	mkdir -p ~/.local/share/nvim/site/pack/packer/start/
+	mkdir -pv ~/.local/share/nvim/site/pack/packer/start/
 
 	git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  	 ~/.local/share/nvim/site/pack/packer/start/packer.nvim
