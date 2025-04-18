@@ -22,8 +22,10 @@ Also keeps you sharp.
 	 'L3MON4D3/LuaSnip'
 	 'numToStr/Comment.nvim'
 
-Windows usually puts all nvim stuff in some crazy directory
-so just follow the advice directly from wbthomason/packer directly: 
+On Windows Neovim configuration data gets put in AppData\Local
+so follow the advice directly from wbthomason for the packer package directly: 
+
+	git clone https://github.com/petesuch/nvim-config "$env:LOCALAPPDATA\nvim"
 
 	git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
  	
