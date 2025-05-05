@@ -4,22 +4,7 @@ return require('packer').startup(function(use)
   -- Packer manages itself
   use 'wbthomason/packer.nvim'
 
-  use {
-    --  Navarasu/onedark with higher contrast settings for people
-    --  with early cataracts and color deficiencies
-    'petesuch/darkpeter.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("darkpeter").setup({
-        style = "deep",
-        term_colors = true, -- Ensure terminal colors match
-      })
-      require("darkpeter").load()
-    end
-  }
-
-  -- Telescope for fuzzy finding
+    -- Telescope for fuzzy finding
   use {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.2',
