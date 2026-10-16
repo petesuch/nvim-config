@@ -36,22 +36,22 @@ return {
     end,
   },
 
--- --- TokyoNight -------------------------------------------------------------
-{
-  "folke/tokyonight.nvim",
-  lazy = false,      -- load at startup since it's the colorscheme
-  priority = 1000,   -- load before anything else that touches highlights
-  config = function()
-    require("tokyonight").setup({
-      style = "night",   -- "storm" | "night" | "moon" | "day"
-      on_colors = function(colors)
-        colors.bg      = "#000000"
-        colors.bg_dark = "#000000"
-      end,
-    })
-    vim.cmd.colorscheme("tokyonight")
-  end,
-},
+  -- --- TokyoNight -------------------------------------------------------------
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,      -- load at startup since it's the colorscheme
+    priority = 1000,   -- load before anything else that touches highlights
+    config = function()
+      require("tokyonight").setup({
+        style = "night",   -- "storm" | "night" | "moon" | "day"
+        on_colors = function(colors)
+          colors.bg      = "#000000"
+          colors.bg_dark = "#000000"
+        end,
+      })
+      vim.cmd.colorscheme("tokyonight")
+    end,
+  },
 
   -- ─── Lualine ──────────────────────────────────────────────────────────────
   {
@@ -68,8 +68,8 @@ return {
   },
 
   -- ─── Commenting ───────────────────────────────────────────────────────────
-{
-  "numToStr/Comment.nvim",
+  {
+    "numToStr/Comment.nvim",
     opts = {
       ---Add a space b/w comment and the line
       padding = true,
@@ -79,34 +79,34 @@ return {
       ignore = nil,
       ---LHS of toggle mappings in NORMAL mode
       toggler = {
-          ---Line-comment toggle keymap
-          line = 'gcc',
-          ---Block-comment toggle keymap
-          block = 'gbc',
+        ---Line-comment toggle keymap
+        line = 'gcc',
+        ---Block-comment toggle keymap
+        block = 'gbc',
       },
       ---LHS of operator-pending mappings in NORMAL and VISUAL mode
       opleader = {
-          ---Line-comment keymap
-          line = 'gc',
-          ---Block-comment keymap
-          block = 'gb',
+        ---Line-comment keymap
+        line = 'gc',
+        ---Block-comment keymap
+        block = 'gb',
       },
       ---LHS of extra mappings
       extra = {
-          ---Add comment on the line above
-          above = 'gcO',
-          ---Add comment on the line below
-          below = 'gco',
-          ---Add comment at the end of line
-          eol = 'gcA',
+        ---Add comment on the line above
+        above = 'gcO',
+        ---Add comment on the line below
+        below = 'gco',
+        ---Add comment at the end of line
+        eol = 'gcA',
       },
       ---Enable keybindings
       ---NOTE: If given `false` then the plugin won't create any mappings
       mappings = {
-          ---Operator-pending mapping; `gcc` `gbc` `gc[count]{motion}` `gb[count]{motion}`
-          basic = true,
-          ---Extra mapping; `gco`, `gcO`, `gcA`
-          extra = true,
+        ---Operator-pending mapping; `gcc` `gbc` `gc[count]{motion}` `gb[count]{motion}`
+        basic = true,
+        ---Extra mapping; `gco`, `gcO`, `gcA`
+        extra = true,
       },
       ---Function to call before (un)comment
       pre_hook = nil,
