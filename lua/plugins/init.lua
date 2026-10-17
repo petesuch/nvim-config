@@ -18,9 +18,6 @@ return {
     },
   },
 
-  -- Treesitter highlighting is now built into Neovim 0.12 itself — see the
-  -- note in init.lua. The plugin and its config block are gone.
-
   -- ─── File tree ────────────────────────────────────────────────────────────
   {
     "nvim-tree/nvim-tree.lua",
@@ -43,7 +40,7 @@ return {
     priority = 1000,   -- load before anything else that touches highlights
     config = function()
       require("tokyonight").setup({
-        style = "night",   -- "storm" | "night" | "moon" | "day"
+        style = "moon",   -- "storm" | "night" | "moon" | "day"
         on_colors = function(colors)
           colors.bg      = "#000000"
           colors.bg_dark = "#000000"
@@ -60,8 +57,6 @@ return {
     event = "VeryLazy",
     config = function()
       require("lualine").setup({
-        -- "papercolor_light" clashed with the tokyonight/black background
-        -- above; "tokyonight" matches the colorscheme you're actually using.
         options = { theme = "tokyonight" },
       })
     end,
@@ -117,11 +112,6 @@ return {
     event = "BufReadPost",
     config = true,              -- calls require("Comment").setup() for you
   },
-  -- ─── LSP ──────────────────────────────────────────────────────────────────
-  -- As of mason-lspconfig v2 (paired with Neovim 0.11+'s native vim.lsp.config
-  -- API), setup_handlers()/handlers and automatic_installation are gone.
-  -- Servers are declared with vim.lsp.config() and auto-enabled via
-  -- automatic_enable, which is mason-lspconfig's default.
 
   -- Mason: installs language servers, linters, formatters
   {
