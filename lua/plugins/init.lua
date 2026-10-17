@@ -57,7 +57,9 @@ return {
     event = "VeryLazy",
     config = function()
       require("lualine").setup({
-        options = { theme = "tokyonight" },
+        -- check lualine website for themes
+        -- "auto" | "powerline_dark" | "base16" | "tokyonight" 
+        options = { theme = "base16" },
       })
     end,
   },
